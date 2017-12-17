@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>escopo</title>
+</head>
+<body></body>
+<script>
+    if(true) {
+        var breed = 'lion'
+        console.log(breed); // works
+    }
+    console.log(breed); // works!
+
+    var animal // global
+    function sayAnimal() { 
+        animal = 'cat'
+        var animalName = 'Banjo' // function scoped!
+        console.log(animal) // works
+        console.log(animalName) // works
+    }
+
+    sayAnimal()
+    console.log(animal) // works
+    console.log(animalName) // error! not defined
+</script>
+</html>
