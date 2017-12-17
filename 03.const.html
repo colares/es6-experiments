@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>const</title>
+</head>
+<body></body>
+<script>
+    const animal = 'cat'
+    // animal = 'dog' // error!
+    
+    const cat = {
+        name: "Banjo",
+        age: 2
+    }
+    console.log(cat) // age: 2
+    cat.age = 3; // NOT IMUTABLE!
+    console.log(cat) // age: 3
+
+    Object.freeze(cat) // now, imutable
+    cat.age = 4; // NOT IMUTABLE!
+    console.log(cat) // age: 3
+
+</script>
+</html>
