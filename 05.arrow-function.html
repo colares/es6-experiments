@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>const</title>
+</head>
+<body></body>
+<script>
+const brazil = ['Salvador', 'Fortaleza', 'São Paulo']
+
+const love = brazil.map(function(name) {
+    return `I love ${name}`
+})
+console.log(love);
+
+// Replace function by =>
+const loveArrow = brazil.map((name) => {
+    return `I love ${name}`
+})
+console.log(loveArrow);
+
+// Get rid of the (), because there's a single argument
+const loveArrowSingleArg = brazil.map(name => {
+    return `I love ${name}`
+})
+console.log(loveArrowSingleArg);
+
+// Due do the one-line return, you can get rid
+// of the {} and the 'return'
+const oneLine = brazil.map(name => `I love ${name}`)
+console.log(oneLine);
+
+const loveFilter = brazil
+    .filter(name => name === 'Fortaleza')
+    .map(name => `I love ${name}`)
+console.log(loveFilter)
+</script>
+</html>
