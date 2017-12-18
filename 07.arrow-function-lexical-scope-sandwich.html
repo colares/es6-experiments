@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>arrow function - lexical scope - sandwich</title>
+</head>
+<body>
+    <button id="btn">Make me a sandwichick me</button>
+</body>
+<script>
+    const sandwich = {
+        bread: 'Brot',
+        cheese: 'gorgonzola',
+
+        prepare: function() {
+            return `I want a sandwich with ${this.bread} and ${this.cheese}`
+        },
+
+        // ES5
+        make: function() {
+            // esse this aqui é sandwich
+            var that = this;
+            window.setTimeout(function (){
+                // não funcionaria porque aqui,
+                // o this está associado ao window.
+                // E não ao sandwich
+                // console.log(this.prepare())
+                console.log(that.prepare())
+            }, 500)
+        }
+
+    }
+
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', function() {sandwich.make()})
+
+</script>
+</html>
