@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>template literals</title>
+</head>
+<body></body>
+<script>
+    const article = {
+        title: "Duis magna sapien, rhoncus tincidunt libero",
+        intro: "Quisque ut tempor tortor, vel feugiat elit. Donec eleifend varius enim, et tincidunt nisi lacinia quis.",
+        body: "Vestibulum rhoncus nibh vitae nunc semper, nec dictum dolor egestas. Donec ac orci nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse porttitor est sit amet nunc mattis tristique. ",
+        tags: ["lorem", "ipsum", "dolor", "sit", "amet"],
+        author: 'Thiago Colares'
+    }
+
+    function renderAuthor(name) {
+        return (name) ? name : 'unknown'
+    }
+
+    const markup = `
+        <article>
+            <header>
+                <h1>${article.title}</h1>
+            </header>
+            <section>
+                <p>${article.intro}</p>
+            </section>
+            <footer>
+                <ul>
+                    ${article.tags.map(tag => `<li>${tag}</li>` ).join('')}
+                </ul>
+                <p>${renderAuthor(article.author)}</p>
+            </footer>
+        </article>
+    `
+    // note:
+    // <ul>${article.tags.map(tag => `<li>${tag}</li>` )}</ul>
+    // returns
+    // <li>lorem</li>,
+    // <li>ipsum</li>,
+    // why?
+    // it did this:
+    // '<ul>' + [<li>lorem</li>, <li>lorem</li>] + '</ul>'
+    // which call the toString() of an array
+    // which, by default, joint(',')
+    // how to solve it? join it you before it's concatenated by default
+
+    document.body.innerHTML = markup
+</script>
+</html>
