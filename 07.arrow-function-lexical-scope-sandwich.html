@@ -16,16 +16,9 @@
             return `I want a sandwich with ${this.bread} and ${this.cheese}`
         },
 
-        // ES5
         make: function() {
-            // esse this aqui é sandwich
-            var that = this;
-            window.setTimeout(function (){
-                // não funcionaria porque aqui,
-                // o this está associado ao window.
-                // E não ao sandwich
-                // console.log(this.prepare())
-                console.log(that.prepare())
+            window.setTimeout( () => {
+                console.log(this.prepare())
             }, 500)
         }
 
