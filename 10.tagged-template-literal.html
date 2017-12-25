@@ -20,12 +20,24 @@
 
     // (1) The first argument of a tag function contains an array of string values (literals). 
     // (2) The remaining arguments are related to the expressions.
-    function green (strings, city, state, country) {
+    // can be called separately: city, state, country
+    // or using the rest paramters sintax: ...values (array)
+    function green (strings, ...values) {
         // When the debugger is invoked, execution is paused at the debugger statement. It is like a breakpoint in the script source.
-        debugger
+        return strings.reduce((accumulator, current, i) => {
+            return `
+                ${accumulator}
+                <span class="green">${values[i-1]}</span>
+                ${current}
+            `
+            // where
+            // ${accumulator} --> initial literal
+            // $values --> the literal template variables
+            // ${current} --> the remaining part of the template literal
+        })
     }
 
-    const quote = green`I live ${city} from ${state} of ${country}`
+    const quote = green`I live in ${city} from ${state} of ${country}`
 
     document.body.innerHTML = quote
 </script>
