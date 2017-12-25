@@ -3,6 +3,12 @@
 <head>
     <meta charset="utf-8"/>
     <title>tagged template literal</title>
+    <style>
+        .green {
+            color: green;
+            font-size: 30px
+        }
+    </style>
 </head>
 <body>
     
@@ -12,7 +18,14 @@
     const state = 'Bahia'
     const city = 'Salvador'
 
-    const quote = `I live ${city} from ${state} of ${country}`
+    // (1) The first argument of a tag function contains an array of string values (literals). 
+    // (2) The remaining arguments are related to the expressions.
+    function green (strings, city, state, country) {
+        // When the debugger is invoked, execution is paused at the debugger statement. It is like a breakpoint in the script source.
+        debugger
+    }
+
+    const quote = green`I live ${city} from ${state} of ${country}`
 
     document.body.innerHTML = quote
 </script>
