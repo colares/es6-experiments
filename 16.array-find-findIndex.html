@@ -22,14 +22,22 @@ const data = [
     }
 ]
 
-const sampleArray = [4, -5, -2, 0]
+const joston = data.find(person => person.name === "Joston")
+console.log(joston)
 
-// if it finds it, stops
-const underZero = sampleArray.find(x => x<0)
-console.log(underZero)
+const jostonIndex = data.findIndex(person => person.name === "Thiago")
+console.log(jostonIndex)
 
-const underZeroIndex = sampleArray.findIndex(x => x<0)
-console.log(underZeroIndex)
+
+// const sampleArray = [4, -5, -2, 0]
+
+// // if it finds it, stops
+// const underZero = sampleArray.find(x => x<0)
+// console.log(underZero)
+
+// const underZeroIndex = sampleArray.findIndex(x => x<0)
+// console.log(underZeroIndex)
+
 
 </script>
 </html>
