@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>array find and findIndex</title>
+</head>
+<body>
+
+</body>
+<script> 
+
+const data = [
+    {
+        name: "Joston",
+        age: 30,
+        city: 'Fortaleza'
+    },
+    {
+        name: "Thiago",
+        age: 33,
+        city: 'Salvador'
+    }
+]
+
+const sampleArray = [4, -5, -2, 0]
+
+// if it finds it, stops
+const underZero = sampleArray.find(x => x<0)
+console.log(underZero)
+
+const underZeroIndex = sampleArray.findIndex(x => x<0)
+console.log(underZeroIndex)
+
+</script>
+</html>
