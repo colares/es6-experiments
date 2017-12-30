@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>destructing arrays</title>
+</head>
+<body>
+
+</body>
+<script> 
+
+const data = ['Thiago', 'Colares', 26, 'Salvador']
+// const [name, surname] = data
+let name, surname
+[name, surname, age, city, country = "Brazil"] = data
+
+console.log(name, surname, country)
+
+var a = 1;
+var b = 3;
+[a, b] = [b, a]
+console.log(a) // 3
+console.log(b) // 1
+
+
+</script>
+</html>
