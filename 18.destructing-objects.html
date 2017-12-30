@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>destructing objects</title>
+</head>
+<body>
+
+</body>
+<script> 
+
+var data = {
+    name: "Joston",
+    surname: "Muriel",
+    age: 30,
+    blog: 'https://jostonmuriel.com',
+    social: {
+        twitter: '@jostonmuriel',
+        facebook: '/jostonmuriel'
+    }
+}
+
+// fetching data
+const {name, surname} = data
+console.log(name)
+console.log(surname)
+
+// fetching idented data
+const {twitter, facebook} = data.social
+console.log(twitter)
+console.log(facebook)
+
+// renaming var name
+const {facebook:fb} = data.social
+console.log(fb)
+
+// defining a default value
+var {city} = data
+console.log(city)
+var {city = "Salvador"} = data
+console.log(city)
+
+// similar syntaxe:
+// import {React} from 'react'
+
+
+// const name = data.name
+// const surname = data.surname
+// const twitter = data.social.twitter
+// console.log(name)
+// console.log(surname)
+// console.log(twitter)
+
+
+
+</script>
+</html>
