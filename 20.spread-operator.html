@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>spread operator</title>
+</head>
+<body>
+
+</body>
+<script> 
+
+console.log([...'thiago'])
+console.log(...'thiago')
+
+const front = ['react', 'vue', 'angular']
+const back = ['php', 'python', 'ruby']
+console.log(...front)
+
+// let fullStack = front.concat(back)
+// console.log(fullStack)
+
+let fullStack = [];
+fullStack = fullStack.concat(front)
+fullStack.push('RxJS')
+fullStack = fullStack.concat(back)
+console.log(fullStack)
+
+// using ... (the spread operator)
+let newFullStack = [...front, 'RxJS', ...back]
+console.log(newFullStack)
+
+
+</script>
+</html>
