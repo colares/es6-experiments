@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>promises</title>
+</head>
+<body>
+
+</body>
+<script> 
+    // promise passa um mé
+    // resolve --> método que resolve a promise
+    // reject --> método que rejeita a promise
+    var defer = new Promise((resolve, reject) => {
+        if(true) {
+            resolve("Ma oêê!")
+        }
+        reject("Vixe, deu ruim")
+    })
+
+
+    var defer = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(true) {
+                resolve("Ma oêê!")
+            }
+            reject("Vixe, deu ruim")
+        }, 2000)  
+    })
+
+    // posso usar vários métodos do defer
+    // o mais comuns:
+    // then --> quando finalizar, faça algo!
+    // recebe um callback
+    // defer
+    //     .then(data => console.log(data))
+    //     .catch(error => console.log(error))
+
+    defer
+        .then(data => {
+            console.log(data)
+            return 'foo'
+        })
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+
+
+
+</script>
+</html>
