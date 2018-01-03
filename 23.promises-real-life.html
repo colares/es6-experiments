@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>promises real life</title>
+</head>
+<body>
+
+
+
+</body>
+<script> 
+    var posts = fetch('https://willianjusten.com.br/search.json')
+    // console.log(posts)
+
+    // pending --> ainda precisa ser resolvida
+    // resolver --> concluída com sucesso
+    // rejected --> deu erro
+    // setTimeout(() => {
+    //     console.log(posts)
+    // }, 3000)
+    posts
+        .then(data => data.json())
+        .then(data => data.map(post => {
+            console.log(post.title)
+            throw new Error("vixe!")
+        })) 
+        .catch(err => console.error(err))
+
+</script>
+</html>
