@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>herança prototipal</title>
+</head>
+<body>
+</body>
+<script> 
+    // classe
+    function Animal(breed, sound) {
+        // constructor
+        this.breed = breed;
+        this.sound = sound;
+    }
+
+    // methods
+    Animal.prototype.hello = function() {
+        console.log(this.sound)
+    }
+
+    const dog = new Animal('dog', 'woof')
+    const cat = new Animal('cat', 'meown')
+    console.log(dog)
+
+</script>
+</html>
