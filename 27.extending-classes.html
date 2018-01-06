@@ -13,12 +13,25 @@
         }
  
         hello() {
-            console.log(`I'm ${name}`)
+            console.log(`I'm ${this.name}`)
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name, sound) {
+            super(name)
+            this.sound = sound
+        }
+
+        bark() {
+            console.log(`${this.sound}, I'm ${this.name}`)
         }
     }
 
     const cat = new Animal('Banjo')
+    const dog = new Dog('Purê', 'woof')
     console.log(cat)
+    console.log(dog)
 
 </script>
 </html>
