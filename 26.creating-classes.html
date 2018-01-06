@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>creating classes</title>
+</head>
+<body>
+</body>
+<script> 
+    // ES6
+    class Animal {
+        // método obrigatório
+        // usado para construir as propriedades do objeto
+        constructor(breed, sound) {
+            this.breed = breed;
+            this.sound = sound;
+        }
+
+        // Lembre-se que não é mais necessário fazer assim (aparentemente, até dá erro)
+        // hello: function() { }
+        // User shorthand properties
+        hello() {
+            console.log(this.sound)
+        }
+
+        static info() {
+            console.log('This is a class about animals')
+        }
+        
+        get name() {
+            console.log('I have no name')
+        }
+
+        set nickname(nick) {
+            this.nick = nick
+        }
+    }
+
+    // Não é muito usual
+    // let Animal = class{}
+
+    // <= ES5
+    // classe
+    // function Animal(breed, sound) {
+    //     // constructor
+    //     this.breed = breed;
+    //     this.sound = sound;
+    // }
+
+    // // methods
+    // Animal.prototype.hello = function() {
+    //     console.log(this.sound)
+    // }
+
+    const dog = new Animal('dog', 'woof')
+    const cat = new Animal('cat', 'meown')
+    console.log(dog)
+
+</script>
+</html>
