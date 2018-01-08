@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>symbols</title>
+</head>
+<body>
+</body>
+<script> 
+
+
+    let foo = Symbol('name')
+    let bar = Symbol('name')
+    console.log(foo)
+    console.log(bar)
+    console.log(foo === bar)
+    console.log(foo == bar)
+
+    console.log(bar)
+    console.log(bar.toString())
+    let google = {coop: 'ok'}
+    console.log( google.toString())
+    let nick = "colares"
+    let obj = {
+        google: 'gooooogle',
+        bar: true, // o nome da propriedade será ‘bar’. Mesmo se bar foi definido como outra coisa anteriormente
+        [bar]: true,
+        123: true, // o nome da propriedade será '123'
+        'oxe': true, // o nome da propriedade será 
+        [10 + 40]: true,
+        [`I'm ${nick}`]: true
+    }
+    // let obj = {
+    //     [foo]: 'Thiago Colares',
+    //     [bar]: 'Thiago Colares'
+    // 
+
+let tnt = 'bomb'
+let boom = {
+   [tnt]: true
+}
+
+let tnt = 'bomb'
+let boom = {}
+boom[tnt] = true
+
+    console.log(obj)
+    console.log(obj[50])
+    console.log(obj["50"])
+    
+    
+    
+    
+
+        // let obj = {}
+        // obj[foo] = 'bli'
+
+</script>
+</html>
