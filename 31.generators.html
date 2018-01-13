@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>generators</title>
+</head>
+<body>
+</body>
+<script> 
+
+
+
+    function* genNames() {
+        yield 'Thiago'
+        yield 'Colares'
+        yield 'Chaves'
+    }
+    
+    const names = genNames();
+    console.log(names)
+
+    console.log(names.next())
+    console.log(names.next())
+    console.log(names.next())
+    console.log(names.next())
+
+</script>
+</html>
