@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>for...of</title>
+</head>
+<body>
+</body>
+<script> 
+    // iterators
+    //  elementos que uso para iterar
+
+    // iterables:
+    //  elementos sobre os quais podemos iterar
+    //  [1,2,3,4,5]
+    var txt = 'Salvador';
+    var it = txt[Symbol.iterator]()
+    console.log(it)
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+    console.log(it.next())
+
+    for (letter of txt) {
+        console.log(letter)
+        if (letter === 'd') break
+    }
+
+    
+</script>
+</html>
