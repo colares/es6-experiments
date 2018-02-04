@@ -4777,14 +4777,24 @@ var where = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0__internal_curry2__["
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_js__ = __webpack_require__(320);
 
+
+
+
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["a" /* default */])(5, 8));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["d" /* sub */])(8, 2));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["c" /* multiplicacao */])(8, 2));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["b" /* div */])(8, 2));
 
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
 var arr2 = [5, 6, 6, 6, 7, 7, 8, 9, 10, 1];
 
-var arr3 = __WEBPACK_IMPORTED_MODULE_0_ramda__["a" /* union */](arr1, arr2);
+var arr3 = Object(__WEBPACK_IMPORTED_MODULE_0_ramda__["a" /* union */])(arr1, arr2);
+var arr4 = Object(__WEBPACK_IMPORTED_MODULE_0_ramda__["b" /* uniq */])(arr1, arr2);
 
 console.log(arr3);
+console.log(arr4);
 
 /***/ }),
 /* 120 */
@@ -5246,7 +5256,7 @@ console.log(arr3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_226__unionWith__ = __webpack_require__(307);
 /* unused harmony reexport unionWith */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_227__uniq__ = __webpack_require__(60);
-/* unused harmony reexport uniq */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_227__uniq__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_228__uniqBy__ = __webpack_require__(99);
 /* unused harmony reexport uniqBy */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_229__uniqWith__ = __webpack_require__(117);
@@ -13486,6 +13496,42 @@ var zipWith = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0__internal_curry3__
   return rv;
 });
 /* unused harmony default export */ var _unused_webpack_default_export = (zipWith);
+
+/***/ }),
+/* 320 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["d"] = sub;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return mult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return div; });
+function sum(a, b) {
+    return a + b;
+}
+
+// named exports
+// vários exports dentro de um mesmo arquivo
+// só pode chamar com o mesmo nome
+// import precisa das chaves
+function sub(a, b) {
+    return a - b;
+}
+
+function mult(a, b) {
+    return a * b;
+}
+
+function div(a, b) {
+    return a / b;
+}
+
+
+
+// método principal
+// só podemos ter 1 export default por arquivo
+// importar com qualquer nome
+// não precisa usar { } no import
+/* harmony default export */ __webpack_exports__["a"] = (sum);
 
 /***/ })
 /******/ ]);
