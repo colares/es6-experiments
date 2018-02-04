@@ -18,7 +18,9 @@ function div(a, b) {
     return a / b
 }
 
-export { mult as multiplicacao, div };
+const PI = 3.14
+
+export { mult as multiplicacao, div, PI };
 
 // método principal
 // só podemos ter 1 export default por arquivo

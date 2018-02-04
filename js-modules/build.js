@@ -4782,10 +4782,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["a" /* default */])(5, 8));
-console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["d" /* sub */])(8, 2));
-console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["c" /* multiplicacao */])(8, 2));
-console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["b" /* div */])(8, 2));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["b" /* default */])(5, 8));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["e" /* sub */])(8, 2));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["d" /* multiplicacao */])(8, 2));
+console.log(Object(__WEBPACK_IMPORTED_MODULE_1__util_js__["c" /* div */])(8, 2));
+console.log(__WEBPACK_IMPORTED_MODULE_1__util_js__["a" /* PI */]);
 
 var arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6];
 var arr2 = [5, 6, 6, 6, 7, 7, 8, 9, 10, 1];
@@ -13502,9 +13503,10 @@ var zipWith = /*#__PURE__*/Object(__WEBPACK_IMPORTED_MODULE_0__internal_curry3__
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["d"] = sub;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return mult; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return div; });
+/* harmony export (immutable) */ __webpack_exports__["e"] = sub;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return mult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return div; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PI; });
 function sum(a, b) {
     return a + b;
 }
@@ -13525,13 +13527,15 @@ function div(a, b) {
     return a / b;
 }
 
+var PI = 3.14;
+
 
 
 // método principal
 // só podemos ter 1 export default por arquivo
 // importar com qualquer nome
 // não precisa usar { } no import
-/* harmony default export */ __webpack_exports__["a"] = (sum);
+/* harmony default export */ __webpack_exports__["b"] = (sum);
 
 /***/ })
 /******/ ]);
