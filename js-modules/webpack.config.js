@@ -1,4 +1,5 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
+const nodeENV = process.env.NODE_ENV || 'production';
 
 // toda configuração do webpack
 // sem virá aqui
@@ -33,6 +34,9 @@ module.exports = {
             compress: {warnings: false},
             output: {comments: false, beautify: false},
 
+        }),
+        new webpack.DefinePlugin({
+            'process.env': { NODE_ENV: JSON.stringify(nodeENV)}
         })
     ]
 }

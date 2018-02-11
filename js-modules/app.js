@@ -1,11 +1,10 @@
 import {union as junta, uniq} from 'ramda'
 
-
-
-
-
-
 import soma, {sub, multiplicacao, div as dividir, PI} from './util.js'
+
+import react from 'react'
+
+import reactDom from 'react-dom'
 
 console.log(soma(5,8))
 console.log(sub(8,2))
